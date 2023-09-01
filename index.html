@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YIPEE!!</title>
+
+    <style>
+        body {
+            background-color: aquamarine;
+            text-align: center;
+            font: normal 20pt Arial;
+            margin: 0; /* Remover margens padrão do body */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Torna o corpo do mesmo tamanho que a altura da tela */
+        }
+
+        p {
+            font-size: 100px;
+            font-family: Comic Sans MS, Comic Sans, Impact;
+        }
+
+        img {
+            width: 400px;
+            height: 300px;
+        }
+
+        div#botao {
+            line-height: 50px;
+            height: 100px;
+            width: 100px;
+            padding: 10px;
+            background-color: rgb(0, 174, 255);
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>YIPEE!!</p>
+
+    <img src="yipee.jpg">
+
+    <br>
+
+    <audio id="som">
+        <source src="yippeesound.mp3">
+    </audio>
+
+    <div id="botao" onmousedown="apertar()" onmouseup="soltar()" ontouchstart="apertar()" ontouchend="soltar()">Clique aqui...</div>
+
+    <script>
+        var botão = document.getElementById('botao')
+        var yipee = document.getElementById('som')
+
+        function apertar() {
+            botão.style.height = '80px'
+            botão.style.width = '80px'
+            yipee.play()
+        }
+
+        function soltar() {
+            botão.style.height = '100px'
+            botão.style.width = '100px'
+        }
+    </script>
+</body>
+</html>
